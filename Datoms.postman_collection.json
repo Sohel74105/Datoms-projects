@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "50dceea6-20e3-4324-b75a-beb1c8968199",
+		"name": "Datoms",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "acc",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q=Pune&appid=44ee963ea8384bd561e7cce2a9b68f08",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Pune"
+						},
+						{
+							"key": "appid",
+							"value": "44ee963ea8384bd561e7cce2a9b68f08"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q=Mumbai&appid=44ee963ea8384bd561e7cce2a9b68f08",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Mumbai"
+						},
+						{
+							"key": "appid",
+							"value": "44ee963ea8384bd561e7cce2a9b68f08"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
